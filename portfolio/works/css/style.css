@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+body {
+    background-color: #fff;
+}
+
+.main_wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery_top {
+    display: none;
+}
+
+.fv img {
+    width: 1000px;
+    height: 534px;
+    object-fit: contain;
+}
+
+.fv_banner {
+    display: flex;
+}
+
+.work_title {
+    display: flex;
+}
+
+.work_desc span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: #0010ce;
+    border-radius: 50%;
+    margin-bottom: -19px;
+    margin-left: -11px;
+    opacity: 0.3;
+}
+
+.title {
+    padding-left: 30px;
+    border-left: 8px solid #0010ce;
+}
+
+.content {
+    margin: 40px 0;
+    font-size: clamp(1.125rem, 0.9rem + 0.96vw, 1.5rem);
+    line-height: 1;
+}
+
+.work_info {
+    position: relative;
+    top: 4px;
+    left: 11px;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+.work_detail {
+    padding-bottom: 40px;
+    font-size: 16px;
+}
+
+.work_concept {
+    margin: 38px 0 160px;
+}
+
+/*ページ*/
+.work_cat {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin-bottom: 220px;
+}
+
+.work_page {
+    font-size: 24px;
+    font-family: "Prompt";
+    font-weight: 600;
+    font-style: normal;
+}
+
+/*モーダル*/
+#lightbox .lb-container {
+    padding: 1px;
+}
+#lightbox .lb-container {
+    padding: 0px;
+}
+#lightbox .lb-outerContainer {
+    padding: 6px;
+}
+
+.lb-container {
+    width: 100%;
+    height: auto;
+}
+.lb-image {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .main_wrap {
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+}
+@media screen and (max-width: 767px) {
+    .gallery_top {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+        padding-bottom: 110px;
+    }
+
+    .fv_banner {
+        display: block;
+        padding-bottom: 110px;
+    }
+
+    .fv_banner img {
+        height: auto;
+    }
+
+    .title {
+        margin: 0 auto;
+        padding-left: 0px;
+        font-size: 28px;
+        border: none;
+    }
+    .fv_sp img {
+        height: auto;
+    }
+}

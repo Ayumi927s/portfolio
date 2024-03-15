@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    margin: 185px auto;
+    max-width: 1000px;
+}
+
+.pc_nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.contact h1 {
+    padding-bottom: 15px;
+}
+
+.emphasis {
+    margin: 90px 0 15px;
+    font-size: 32px;
+}
+
+.description {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+}
+
+span {
+    color: red;
+}
+
+#msg {
+    margin-bottom: 180px;
+    padding-bottom: 50px;
+    min-height: 200px;
+}
+
+button {
+    width: 320px;
+    height: 80px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: #131313;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid #0010ec;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+/*送信でにホバーすると色が変わる*/
+button:hover {
+    color: #fff;
+    background: #0010ec;
+}
+
+.pc_nav ul li {
+    color: #111;
+    text-align: center;
+}
+
+select {
+    position: relative;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 25px;
+    font-family: "Prompt", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+}
+/*選択矢印*/
+.toc {
+    position: relative;
+    width: 50%;
+}
+.toc:after {
+    content: "";
+    position: absolute;
+    right: 10%;
+    top: 33%;
+    width: 25px;
+    height: 25px;
+    border-top: 4px solid #0010ec;
+    border-left: 4px solid #0010ec;
+    border-radius: 1px;
+    pointer-events: none;
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+/*ここからSP版*/
+@media screen and (max-width: 767px) {
+    .contact {
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+
+    .contact:after {
+        max-width: 100%;
+        margin: 0 auto;
+        right: 10px;
+        top: 25px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .toc {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .toc {
+        max-width: 500px;
+    }
+}

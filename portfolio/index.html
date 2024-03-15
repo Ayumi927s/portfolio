@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="portfolio">
+    <title>shibuya ayumiのportfolio</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- ローディング用HTML -->
+    <div id="splash">
+        <div id="splash-logo">Loding</div>
+    </div><!--/splash-->
+    <div class="splashbg"></div><!---画面遷移用-->
+    <!-- ローディング用HTML ここまで -->
+
+    <div id="container">
+        <header class="header">
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#skill">skill</a></li>
+                    <li><a href="#gallery">gallery</a></li>
+                    <li><a href="contact/index.html">contact</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#gallery">gallery</a></li>
+                    <li><a href="contact/index.html">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <section id="home">
+            <div class="main_wrap">
+                <div class="main_first">
+                    <img src="images/hello.png" alt="あいさつ">
+                </div>
+                <div class="main_catch">
+                    <h1>
+                        <img src="images/title.png" alt="PORTFOLIO">
+                        <img src="images/name.png" alt="SHIBUYA AYUMI">
+
+                    </h1>
+                    <p class="catch_copy">大切に育ててきた思いを形にする<br class="sp_only"> お手伝いをしたい</p>
+                </div>
+            </div>
+
+            <div class="scroll">
+                <div class="scrolldown active"><span>Scroll</span></div>
+            </div>
+        </section>
+
+
+
+        <section id="about">
+            <div class="about_wrap">
+                <div class="about_base">
+                    <div class="fluid">
+                        <div class="fluid_obj obj01"></div>
+                        <div class="fluid_obj obj02"></div>
+                    </div>
+                    <div class="about_img">
+                        <img src="images/about_pic.jpg" alt="about写真">
+                    </div>
+                    <div class="sp_about">
+                        <img src="images/about_sp.jpg" alt="about写真_sp版">
+                    </div>
+                    <div class="about_title">
+                        <h2><img src="images/about_logo.png" alt="about"></h2>
+                    </div>
+
+                </div>
+                <div class="about_wrapper">
+                    <h3 class="profile_img"><img src="images/profile.png" alt="profile"></h3>
+                    <p>焙煎屋の主人の仕事を手伝いながら、2児の母をしています<br>
+                        20代の頃はネイリストとして大阪で働き<br>
+                        30代は子育てに奮闘し（現在進行形ですが）新たなステージへステップアップするために
+                        以前から興味のあったwebデザイナーに挑戦しています。<br>
+                        もともと細かいことを黙々とすることや陰でサポートすることにやり甲斐を感じるタイプです。<br>
+                        一人一人に寄り添いながらsあーしたい、こーしたいを実現するお手伝いがしたいです。</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="skill">
+            <div class="skill_wrap">
+                <h2><img src="images/skill.png" alt="skill_logo" class="skill"></h2>
+                <div class="skill_wrapper">
+                    <div class="skill_col">
+                        <div class="skill_group">
+                            <h3>デザイン</h3>
+                            <img src="images/design.png" alt="designのアイコン">
+                        </div>
+                        <div class="skill_title">
+                            <div class="ai ai_animation">
+                                <img src="images/Ai_img.svg" alt="ai_img">
+                                <img src="images/Ai_logo.png" alt="ai_logo" class="ai_menu">
+                            </div>
+                            <div class="ps ps_animation">
+                                <img src="images/Ps_img.svg" alt="ps_img">
+                                <img src="images/Ps_logo.png" alt="ps_logo" class="ps_menu">
+                            </div>
+                        </div>
+                        <p class="skill_p">デザインの基礎を学び様々なテーマに合わせてデザインカンプを作成することが出来ます。<br>
+                            またユーザ目線を忘れずに使いやすいデザインをご提案します。
+                        </p>
+                    </div>
+
+                    <div class="skill_col">
+                        <div class="skill_group">
+                            <h3>コーディング</h3>
+                            <img src="images/coding.png" alt="codingのアイコン">
+                        </div>
+                        <div class="skill_title">
+                            <div class="html_css animation">
+                                <img src="images/html_css_img.svg" alt="html_css_img">
+                                <img src="images/html_css_logo.png" alt="html_css_logo" class="html_css_menu">
+                            </div>
+                            <div class="js js_animation">
+                                <img src="images/js_img.svg" alt="jS_img">
+                                <img src="images/js_logo.png" alt="jS_logo" class="js_menu">
+                            </div>
+                        </div>
+                        <p class="skill_p">HTML,CSSを使用しわかりやすい丁寧なコーディングを心がけています。
+                            またj Queryなどを使用し動きのあるサイトの実装も行います。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="gallery">
+            <div class="gallery_wrap">
+                <div class="gallery_logo">
+                    <h2><img src="images/gallery.png" alt="gallery"></h2>
+                </div>
+                <div class="gallery_wrapper">
+                    <ul>
+                        <li><a href="#"><img src="#" alt="portfolio" class="gallery_img">
+                                <div class="gallery_title">portfolio<span></span></div>
+                            </a></li>
+                        <li><a href="works/work1.html"><img src="images/kadai_03_shibuya_pop04ol.jpg" alt="web_banner"
+                                    class="gallery_img">
+                                <div class="gallery_title">web用バナー</div>
+                            </a></li>
+                        <li><a href="works/work2.html"><img src="images/salon_HP.jpg" alt="hair_salon"
+                                    class="gallery_img">
+                                <div class="gallery_title">solonサイト</div>
+                            </a></li>
+                        <li><a href="works/work3.html">
+                                <img src="images/design_cafe.jpg" alt="design_cafe" class="gallery_img">
+                                <div class="gallery_title">cafeサイト</div>
+                            </a></li>
+                    </ul>
+                </div>
+
+                <div class="gallery_wrapper hide">
+                    <ul class="gallery_hide">
+                        <li><a href="works/work4.html"><img src="images/Kadai_shibuya-02.jpg" alt="trace"
+                                    class="gallery_img">
+                                <div class="gallery_title">トレース</div>
+                            </a></li>
+                        <li class="visibiliry-hidden"><a href="works/work3.html">
+                                <img src="images/design_cafe.jpg" alt="design_cafe" class="gallery_img">
+                                <div class="gallery_title">cafeサイト</div>
+                            </a></li>
+                    </ul>
+                </div>
+
+                <p class="btn">viem more</p>
+
+
+            </div>
+        </section>
+
+        <footer class="footer">
+            <nav class="footer_nav">
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#gallery">gallery</a></li>
+                    <li><a href="contact/index.html">contact</a></li>
+                </ul>
+            </nav>
+            <div class="footer_catch">
+                <p>Thank you for your time</p>
+                <div class="footer_title">
+                    <img src="images/footer.png" alt="PORTFOLIO">
+                    <img src="images/footer_name.png" alt="SHIBUYA AYUMI">
+                </div>
+            </div>
+
+            <div class="footer_copy">
+                <small>&copy;2024 SHIBUYA AYUMI</small>
+            </div>
+        </footer>
+
+
+        <a href="index.html" class="page_top"><img src="images/top.png" alt="topに戻る"></a>
+        <a href="contact/index.html" class="sp_contact"><img src="images/contact@2x.png" alt="お問合せ"></a>
+    </div>
+
+
+    <script>
+        // アコーディオン
+        $(function () {
+            $(".btn").on("click", function () {
+                $('.gallery_hide').offset().top;
+                $(this).toggleClass("on-click");
+                $(".hide").slideToggle(1000);
+                if ($(this).text() === 'close') {
+                    $(this).text('view more');
+                } else {
+                    $(this).text('close');
+                }
+            });
+        });
+        //スクロールのアニメーション
+        $(function () {
+            $(".scrolldown:before").on('click', function () {
+                $(this).toggleClass("active");
+            });
+        });
+        //円の拡大
+        $(function () {
+            /* スクロール量 代入用 */
+            var scroll;
+            /* 円の大きさ+スクロール量 代入用 */
+            var sum;
+            $(window).scroll(function () {
+                /* スクロール量を取得 */
+                scroll = $(this).scrollTop();
+                /* コンソールログで確認  */
+                console.log(scroll);
+                /* 円の大きさ+スクロール量 / 50（調整）*/
+                sum = 1 + scroll / 80;
+                console.log(sum);
+                /* 円の大きさにスクロール量を足す */
+                $(".scrolldown").css({
+                    "transform": "scale(" + sum + ")"
+                })
+            })
+        })
+    </script>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

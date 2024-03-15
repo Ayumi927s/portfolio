@@ -1,0 +1,510 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #000;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    font-feature-settings: "palt";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f2f7fa;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/*ローデイング画面*/
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/loding.png);
+    background-size: cover;
+    z-index: 9999999;
+    text-align: center;
+}
+
+#splash-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    font-family: "Prompt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+
+body.appear {
+    background: #f2f7fa; /*画面を開いた後の背景色を指定*/
+}
+
+.splashbg {
+    display: none;
+    content: "";
+    position: fixed;
+    transform: scale(100);
+    background-image: url(/images/loding.png); /*伸びる背景色の設定*/
+    z-index: 999;
+    /*丸のスタートの形状*/
+    top: calc(50% - 1rem); /*50%から円の半径を引いた値*/
+    left: calc(50% - 1rem); /*50%から円の半径を引いた値*/
+    width: 2rem;
+    height: 2rem;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg {
+    display: block;
+    border-radius: 50%;
+    animation-name: PageAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes PageAnime {
+    0% {
+        /*丸のスタート位置と形状*/
+        transform: scale(100);
+    }
+    100% {
+        /*丸の終了位置と形状*/
+        transform: scale(0);
+        display: none; /*終了時は消える*/
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container {
+    opacity: 0; /*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container {
+    animation-name: PageAnimeAppear;
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes PageAnimeAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*ヘッダー*/
+.header {
+    padding: 60px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.pc_nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 60px;
+}
+
+.pc_nav ul li {
+    color: #131313;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    position: relative;
+    z-index: 1;
+}
+
+.pc_nav ul li a {
+    display: block;
+    padding: 0 20px;
+    border-radius: 40px;
+}
+
+.pc_nav ul li a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #0010ec;
+    border-radius: 40px;
+    transition: transform ease 0.5s;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+}
+
+.pc_nav ul li a:hover {
+    color: #fff;
+}
+
+.pc_nav ul li a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+/*ボタン*/
+button {
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+button img {
+    display: block;
+}
+
+.page_top {
+    position: fixed;
+    right: 90px;
+    bottom: 40px;
+}
+
+.page_top:hover img {
+    transition: transform 1s;
+    transform: rotate(-360deg);
+}
+
+.sp_contact {
+    display: none;
+}
+
+/*フッター*/
+.footer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer_nav ul {
+    display: flex;
+    gap: 60px;
+    justify-content: flex-end;
+    padding-top: 74px;
+}
+
+.footer_nav ul li {
+    color: #131313;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Prompt";
+    font-weight: 300;
+    font-style: normal;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.footer_nav li a {
+    padding: 0 20px;
+    border-radius: 40px;
+    line-height: 1;
+}
+
+.footer_nav li a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #0010ec;
+    border-radius: 40px;
+    transition: transform ease 0.5s;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+}
+
+.footer_nav ul li a:hover {
+    color: #fff;
+}
+
+.footer_nav ul li a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+.footer_title img {
+    display: block;
+    padding-top: 20px;
+}
+
+.footer_title :last-child {
+    padding-top: 0;
+}
+
+.footer_catch {
+    padding-top: 20px;
+    font-size: 32px;
+}
+
+.footer_copy {
+    display: flex;
+    justify-content: center;
+    margin: 120px 0;
+    font-size: 20px;
+    font-family: "Prompt";
+}
+
+.page_back {
+    position: fixed;
+    right: 90px;
+    bottom: 25px;
+}
+.page_back:hover img {
+    transition: transform 1s;
+    transform: rotate(-360deg);
+}
+
+/*thanksPage*/
+.thanks_page {
+    margin-top: 100px;
+}
+
+.thanks_page h1 {
+    text-align: center;
+    padding: 50px;
+}
+
+.thanks_page p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.sp_only {
+    display: none;
+}
+
+.sp_nav,
+.sp_btn {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .pc_nav {
+        display: none;
+    }
+
+    /*ハンバーガーメニュー*/
+
+    .sp_btn {
+        position: fixed;
+        top: 20px;
+        right: 25px;
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        z-index: 200;
+    }
+
+    .sp_btn span {
+        position: relative;
+        top: 10px;
+        display: block;
+        width: 50px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #111;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before,
+    .sp_btn span::after {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #111;
+        transition: 0.3s;
+        right: 0;
+    }
+
+    .sp_btn span::before {
+        width: 33px;
+        bottom: 10px;
+    }
+
+    .sp_btn span::after {
+        width: 70px;
+        top: 10px;
+    }
+
+    .scrolldown.active:before {
+        transform: scale(10);
+        /*〜ここに変化後のプロパティを記載〜*/
+    }
+
+    /*ハンバーガーを閉じる*/
+
+    .sp_btn.open span {
+        background: transparent;
+    }
+
+    .sp_btn.open span::before {
+        bottom: 0px;
+        transform: rotate(45deg);
+        background-color: #0010ec;
+    }
+
+    .sp_btn.open span::after {
+        width: 33px;
+        top: 0px;
+        transform: rotate(135deg);
+        background-color: #0010ec;
+    }
+
+    /* ハンバーガーメニュー */
+    .sp_nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url(../images/menu@2x.png);
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        z-index: 100;
+    }
+
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .sp_nav ul li {
+        padding: 20px;
+        color: #131313;
+        font-size: 80px;
+        font-family: "Prompt", sans-serif;
+        font-weight: 600;
+    }
+    /*ハンバーガーリンクのアニメーション*/
+    a {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        transform: translate(-100%, 0);
+        transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+        content: "";
+    }
+
+    a:hover:after {
+        transform: translate(0, 0);
+    }
+
+    /*フッターメニュー*/
+
+    .footer_nav {
+        display: none;
+    }
+
+    .footer_title img {
+        margin: 0 auto;
+    }
+
+    .footer_copy {
+        margin-top: 80px;
+    }
+
+    .footer_catch {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 160px;
+        font-size: 30px;
+    }
+
+    .footer_catch p {
+        text-align: center;
+    }
+
+    .page_top {
+        display: none;
+    }
+
+    .page_back {
+        display: none;
+    }
+
+    .sp_contact {
+        display: block;
+        position: fixed;
+        width: 26%;
+        right: 20px;
+        bottom: 35px;
+        z-index: 99;
+    }
+}

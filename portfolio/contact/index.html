@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="portfolio">
+    <title>contact</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <nav class="pc_nav">
+            <ul>
+                <li><a href="../index.html">home</a></li>
+                <li><a href="../index.html#about">about</a></li>
+                <li><a href="../index.html#skill">skill</a></li>
+                <li><a href="../index.html#gallery">gallery</a></li>
+                <li><a href="index.html">contact</a></li>
+            </ul>
+        </nav>
+        <div class="sp_btn"><span></span></div>
+        <nav class="sp_nav">
+            <ul>
+                <li><a href="../index.html#about">about</a></li>
+                <li><a href="../index.html#gallery">gallery</a></li>
+                <li><a href="index.html">contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc9DAJ33USpOyuQJ3zvPEdmzs7ylniNVVl72YNDAQlPOdg06Q/formResponse"
+        method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+        <div class="contact">
+            <h1>お問い合わせ種別</h1>
+            <input type="hidden" name="entry.1982345762">
+            <div class="toc">
+                <select name="item">
+                    <option value="item1">制作のご依頼</option>
+                    <option value="item2">その他</option>
+                </select>
+            </div>
+            <label for="name" class="emphasis"><span>*</span>お名前</label>
+            <input id="name" type="text" name="entry.1222943963" placeholder="ヤマダ　タロウ" class="description" required>
+            <label for="company_name" class="emphasis">会社名</label>
+            <input id="company_name" type="text" name="entry.709390648" placeholder="" class="description">
+            <label for="email" class="emphasis"><span>*</span>メールアドレス</label>
+            <input id="email" type="email" name="entry.504539634" placeholder="example@mail.co.jp" class="description"
+                required>
+            <label for="tel" class="emphasis"><span>*</span>電話番号</label>
+            <input id="tel" type="tel" name="entry.39685794" placeholder="09012340000" class="description" required>
+            <label for="msg" class="emphasis"><span>*</span>お問い合わせ内容</label>
+            <textarea id="msg" name="entry.111183363" placeholder="お問い合わせいただきありがとうございます。後ほどご連絡させて頂きます。"
+                class="description" required></textarea>
+            <button type="submit" name="button" value="送信">送信する</button>
+        </div>
+    </form>
+
+    <footer class="footer">
+        <nav class="footer_nav">
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#gallery">gallery</a></li>
+                <li><a href="contact/index.html">contact</a></li>
+            </ul>
+        </nav>
+        <div class="footer_catch">
+            <p>Thank you for your time</p>
+            <div class="footer_title">
+                <img src="../images/footer.png" alt="PORTFOLIO">
+                <img src="../images/footer_name.png" alt="SHIBUYA AYUMI">
+            </div>
+        </div>
+
+        <div class="footer_copy">
+            <small>&copy;2024 SHIBUYA AYUMI</small>
+        </div>
+    </footer>
+
+    <script> var submitted = false;</script>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted)  {window.location='../thanks.html';}"></iframe>
+
+    <script src="../js/script.js"></script>
+</body>
+
+
+</html>
